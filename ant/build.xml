@@ -1,0 +1,8 @@
+<project name="step1" default="compile">
+	<target name="compile">
+		<mkdir dir="../.build/classes"/>
+		<javac srcdir="../src" destdir="../.build/classes">
+			<classpath location="../lib/swt/swt-x64.jar"/>
+		</javac>
+	</target>
+</project>
