@@ -10,13 +10,14 @@ import java.awt.event.ActionListener;
 public class Gui {
 
     public static JFrame gamePanel;
-    private static final int SIZE_WEIGHT = 300;
-    private static final int SIZE_HEIGHT = 300;
+    private static final int SIZE_WEIGHT = 300;//TODO списал
+    private static final int SIZE_HEIGHT = 300;//TODO списал                                        c
+
     public Gui(Field field) {
 
-        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        int locationX = (screenSize.width - SIZE_WEIGHT) / 2;
-        int locationY = (screenSize.height - SIZE_HEIGHT) / 2;
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();//TODO списал
+        int locationX = (screenSize.width - SIZE_WEIGHT) / 2;//TODO списал
+        int locationY = (screenSize.height - SIZE_HEIGHT) / 2;//TODO списал
 
 //        Field field1 = field;
         gamePanel = new JFrame("TicTacToe");
@@ -65,7 +66,7 @@ public class Gui {
         aboutMenu.addActionListener(new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(gamePanel, "Program \"Tic-Tae-Toi\"");
+                JOptionPane.showMessageDialog(gamePanel, "Программа \"Крестики-Нолики\" - учебный вариант.");
             }
         });
 
@@ -83,7 +84,7 @@ public class Gui {
         topPanel.add(menuBar);
         topPanel.add(restartButton);
 
-        gamePanel.setBounds(locationX, locationY, SIZE_WEIGHT, SIZE_HEIGHT);
+        gamePanel.setBounds(locationX, locationY, SIZE_WEIGHT, SIZE_HEIGHT); // TODO списал
         gamePanel.getContentPane().add(topPanel, BorderLayout.NORTH);
 
         gamePanel.add(gField);

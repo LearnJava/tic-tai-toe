@@ -127,6 +127,85 @@ public class Field {
 		return false;
 	}
 
+//    public boolean checkForWin() {
+//
+//        for (int i = 0; i < ROW_COUNT; i++) {
+//            Cell cell1 = arrayOfLogicCells[i][0];
+//            Cell cell2 = arrayOfLogicCells[i][1];
+//            Cell cell3 = arrayOfLogicCells[i][2];
+//
+//            if (cell1.isZeroChecked() && cell2.isZeroChecked() && cell3.isZeroChecked()) {
+//                isWin = false;
+//                isLose = true;
+//                gameOver = true;
+//                return true;
+//            } else if (cell1.isXChecked() && cell2.isXChecked() && cell3.isXChecked()) {
+//                isWin = true;
+//                isLose = false;
+//                gameOver = true;
+//                return true;
+//            }
+//        }
+//
+//        for (int i = 0; i < COL_COUNT; i++) {
+//            Cell cell4 = arrayOfLogicCells[0][i];
+//            Cell cell5 = arrayOfLogicCells[1][i];
+//            Cell cell6 = arrayOfLogicCells[2][i];
+//
+//            if (cell4.isZeroChecked() && cell5.isZeroChecked() && cell6.isZeroChecked()) {
+//                isWin = false;
+//                isLose = true;
+//                gameOver = true;
+//                return true;
+//            } else if (cell4.isXChecked() && cell5.isXChecked() && cell6.isXChecked()) {
+//                isWin = true;
+//                isLose = false;
+//                gameOver = true;
+//                return true;
+//            }
+//        }
+//
+//        Cell cell7 = arrayOfLogicCells[0][0];
+//        Cell cell8 = arrayOfLogicCells[1][1];
+//        Cell cell9 = arrayOfLogicCells[2][2];
+//
+//        if (((cell7.isZeroChecked()) && (cell8.isZeroChecked()) && (cell9.isZeroChecked()))) {
+//            isWin = false;
+//            isLose = true;
+//            gameOver = true;
+//            return true;
+//        } else if (cell7.isXChecked() && cell8.isXChecked() && cell9.isXChecked()) {
+//            isWin = true;
+//            isLose = false;
+//            gameOver = true;
+//            return true;
+//        }
+//
+//        Cell cell10 = arrayOfLogicCells[0][2];
+//        Cell cell11 = arrayOfLogicCells[1][1];
+//        Cell cell12 = arrayOfLogicCells[2][0];
+//
+//        if (cell10.isZeroChecked() && cell11.isZeroChecked() && cell12.isZeroChecked()) {
+//            isWin = false;
+//            isLose = true;
+//            gameOver = true;
+//            return true;
+//        } else if (cell10.isXChecked() && cell11.isXChecked() && cell12.isXChecked()) {
+//            isWin = true;
+//            isLose = false;
+//            gameOver = true;
+//            return true;
+//        }
+//
+//        if(ActionCounters.getCounter() >= 9) {
+//            isWin = true;
+//            isLose = true;
+//            gameOver = true;
+//            return true;
+//        }
+//        return false;
+//    }
+
 	public Byte[] compMove() {
 
 		if (findTwoZeroInHorizontalLine()) {
@@ -146,13 +225,13 @@ public class Field {
 		} else if (findTwoX_InDiagonalLine2()) {
 			return coordinatesOfCell;
 		} else if (arrayOfLogicCells[1][1].getIsClean()) {
-
+			// Делаем ход в центр
 			arrayOfLogicCells[1][1].computerMove();
 			coordinatesOfCell[0] = 1;
 			coordinatesOfCell[1] = 1;
 			return coordinatesOfCell;
 		} else {
-
+			// ходим в любую свободную клетку
 			while (true) {
 
 				int counter = 0;
@@ -162,8 +241,8 @@ public class Field {
 							counter++;
 						}
 
-						if (counter == NUMBER_OF_CELLS) {
-
+						if (counter == NUMBER_OF_CELLS) { // TODO
+															// константа(ИСПРАВИЛ)
 							return null;
 						}
 					}

@@ -71,7 +71,7 @@ public class GraphicField extends JComponent implements ActionListener {
         g2d.scale(getWidth() / 53, getHeight() / 36);
         if( Field.isWin && Field.isLose) {
             g2d.setColor(Color.BLUE);
-            g2d.drawString("No Winer", 11, 20);
+            g2d.drawString("Ничья", 11, 20);
         } else if (Field.isWin && !Field.isLose) {
             g2d.setColor(Color.DARK_GRAY);
             g2d.drawString("WIN", 17, 20);
@@ -79,7 +79,7 @@ public class GraphicField extends JComponent implements ActionListener {
             g2d.setColor(Color.magenta);
             g2d.drawString("LOSE", 14, 20);
         } else {
-            System.out.println("error");
+            System.out.println("Такого быть не может");
         }
     }
 

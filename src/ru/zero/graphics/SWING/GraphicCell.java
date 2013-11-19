@@ -72,7 +72,7 @@ public class GraphicCell extends JComponent implements MouseListener {
         if (!isClean && !isZero) {
             g2d.setStroke(pen);
             g2d.setColor(Color.black);
-            g2d.drawLine(SPACE, SPACE, getWidth() - SPACE, getHeight() - SPACE);
+            g2d.drawLine(SPACE, SPACE, getWidth() - SPACE, getHeight() - SPACE);  // TODO вот так например можно изменять размер рисуемых фигур
             g2d.drawLine(getWidth() - SPACE, SPACE, SPACE, getHeight() - SPACE);
         } else if (!isClean) {
             g2d.setStroke(pen);

@@ -9,7 +9,7 @@ public class Cell {
         isClean = false;
         isZero = true;
     }
-     //
+
     public void userMove() {
         isClean = false;
     }

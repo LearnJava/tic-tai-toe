@@ -50,18 +50,26 @@ class MouseClickedEventSWT {
                 SWTCellV2 graphicCell = gFieldSWT.groupOfCells[xx][yy];
                 graphicCell.setIsClean(false);
                 graphicCell.setIsZero(true);
-                System.out.println("Coordinate of last computer action. X=" + xx +" Y=" + yy );
+                System.out.println("Координаты последнего хлда компа. Х=" + xx +" Y=" + yy );
 				ActionCounters.addOneAction();
+
+//				if (coordinatesCell == null) {
+//					System.out.println("Компьютеру некуда ходить!!!");
+//					Field.isWin = true;
+//					Field.isLose = true;
+//					return;
+//				}
 
 				graphicCell.drawXorO();
 
 				checkForWinSWT();
 
 			} else {
-				System.out.println("Cell is not clear");
+				System.out.println("Ячейка уже занята");
 			}
         }
 
+//        System.out.println("Stop MouseClickedEventSWT");
     }
 
 	private boolean checkForWinSWT() {
@@ -81,13 +89,13 @@ class MouseClickedEventSWT {
 			Label label = new Label(dialog, SWT.BORDER);
 			label.setFont(fontForDialog);
 			if (Field.isWin && Field.isLose) {
-				label.setText("No Winer");
+				label.setText("Ничья");
 			} else if (Field.isWin && !Field.isLose) {
-				label.setText("You are Win");
+				label.setText("Вы победили");
 			} else if (!Field.isWin && Field.isLose) {
-				label.setText("Loser");
+				label.setText("Вы проиграли");
 			} else {
-				System.out.println("Error");
+				System.out.println("Такого быть не может");
 			}
 
 			Button button = new Button(dialog, SWT.PUSH | SWT.CENTER);

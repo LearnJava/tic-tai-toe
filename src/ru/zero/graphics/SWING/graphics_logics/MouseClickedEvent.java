@@ -9,8 +9,12 @@ import ru.zero.graphics.SWING.Gui;
 
 public class MouseClickedEvent {
 
+    //	private Field logicField;
+
 	public void clickOnMouseLeftButton(Field logicField, GraphicCell gCell,
 			GraphicField gField) {
+
+//        GraphicCell graphicCell1 = gCell;
 
 		if (ActionCounters.getCounter() < GraphicField.NUMBER_OF_CELL
 				&& !Field.gameOver) {
@@ -26,7 +30,7 @@ public class MouseClickedEvent {
                 gCell.setZero(false);
 				cell.userMove();
 			} else {
-				System.out.println("Make Repaint()");
+				System.out.println("Ничего не ставлю, просто делаю Repaint()");
                 gCell.repaint();
 				return;
 			}
@@ -42,7 +46,7 @@ public class MouseClickedEvent {
 			coordinatesCell = logicField.compMove();
 
 			if (coordinatesCell == null) {
-				System.out.println("Copm do not make action!!!");
+				System.out.println("Компьютеру некуда ходить!!!");
 				Field.isWin = true;
 				Field.isLose = true;
 				Gui.gamePanel.getContentPane().repaint();
