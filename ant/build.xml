@@ -1,8 +1,25 @@
-<project name="step1" default="compile">
-	<target name="compile">
-		<mkdir dir="../.build/classes"/>
-		<javac srcdir="../src" destdir="../.build/classes">
-			<classpath location="../lib/swt/swt-x64.jar"/>
-		</javac>
-	</target>
+<project name="05.jar" default="all" >
+
+    <target name="make.dirs" description="Make some dirs">
+        <mkdir dir="../build"/>
+        <mkdir dir="../build/class"/>
+    </target>
+
+    <target name="compile" description="compile java" depends="make.dirs">
+
+        <javac destdir="../build/class" classpath="../lib/swt/swt-x64.jar">
+            <src path="../src"/>
+        </javac>
+    </target>
+
+    <target name="stuff.jar" description="make jar file" depends="compile">
+        <jar destfile="../build/stuff.jar">
+            <fileset dir="../build/class">
+                <include name="**/*.class"/>
+                <exclude name="**/CVS"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="all" description="Do the build" depends="stuff.jar"/>
 </project>
