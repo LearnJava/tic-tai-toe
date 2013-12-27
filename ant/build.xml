@@ -6,12 +6,6 @@
     <property name="src.dir"    value="../src/"/>
     <property name="lib.dir"  value="../lib/swt"/>
 
-    <path id="swt.lib">
-        <fileset dir="${lib.dir}/google-gson-1.4">
-            <include name="swt-x64.jar"/>
-        </fileset>
-    </path>
-
     <target name="make.dirs" description="Make some dirs">
         <mkdir dir="${build.dir}"/>
         <mkdir dir="${class.dir}"/>
