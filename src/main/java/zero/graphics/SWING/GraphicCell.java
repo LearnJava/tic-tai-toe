@@ -1,7 +1,8 @@
-package ru.zero.graphics.SWING;
+package zero.graphics.SWING;
 
-import ru.zero.game_logic.Field;
-import ru.zero.graphics.SWING.graphics_logics.MouseClickedEvent;
+
+import zero.game_logic.Field;
+import zero.graphics.SWING.graphics_logics.MouseClickedEvent;
 
 import javax.swing.*;
 import java.awt.*;

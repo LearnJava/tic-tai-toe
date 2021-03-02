@@ -1,4 +1,4 @@
-package ru.zero.graphics.SWT;
+package zero.graphics.SWT;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.MouseEvent;
@@ -11,9 +11,8 @@ import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Listener;
-
-import ru.zero.StartAllVersionHere;
-import ru.zero.game_logic.Field;
+import zero.StartAllVersionHere;
+import zero.game_logic.Field;
 
 public class SWTCellV2 {
 
@@ -59,7 +58,7 @@ public class SWTCellV2 {
 		this.graphicFieldSWT = graphicFieldSWT;
 
 		fontForCellV2 = new Font(StartAllVersionHere.display, "Arial", 14, SWT.BOLD
-				| SWT.ITALIC);
+		                                                                   | SWT.ITALIC);
 
 		cellV2 = new Canvas(graphicFieldSWT.composite, SWT.BORDER);
 		cellV2.setBackground(new Color(StartAllVersionHere.display, 225, 216, 182));

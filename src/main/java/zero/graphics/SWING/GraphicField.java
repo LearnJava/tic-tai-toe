@@ -1,7 +1,8 @@
-package ru.zero.graphics.SWING;
+package zero.graphics.SWING;
 
-import ru.zero.game_logic.ActionCounters;
-import ru.zero.game_logic.Field;
+
+import zero.game_logic.ActionCounters;
+import zero.game_logic.Field;
 
 import javax.swing.*;
 import java.awt.*;

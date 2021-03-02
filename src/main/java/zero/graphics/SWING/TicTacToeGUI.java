@@ -1,6 +1,7 @@
-package ru.zero.graphics.SWING;
+package zero.graphics.SWING;
 
-import ru.zero.game_logic.Field;
+
+import zero.game_logic.Field;
 
 public class TicTacToeGUI {
 

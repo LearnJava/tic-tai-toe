@@ -1,11 +1,12 @@
-package ru.zero.graphics.SWING.graphics_logics;
+package zero.graphics.SWING.graphics_logics;
 
-import ru.zero.game_logic.ActionCounters;
-import ru.zero.game_logic.Cell;
-import ru.zero.game_logic.Field;
-import ru.zero.graphics.SWING.GraphicCell;
-import ru.zero.graphics.SWING.GraphicField;
-import ru.zero.graphics.SWING.Gui;
+
+import zero.game_logic.ActionCounters;
+import zero.game_logic.Cell;
+import zero.game_logic.Field;
+import zero.graphics.SWING.GraphicCell;
+import zero.graphics.SWING.GraphicField;
+import zero.graphics.SWING.Gui;
 
 public class MouseClickedEvent {
 
@@ -17,7 +18,7 @@ public class MouseClickedEvent {
 //        GraphicCell graphicCell1 = gCell;
 
 		if (ActionCounters.getCounter() < GraphicField.NUMBER_OF_CELL
-				&& !Field.gameOver) {
+		    && !Field.gameOver) {
 			Cell[][] array = logicField.getArray();
 
 			Cell cell = array[gCell.getgX()][gCell.getgY()];

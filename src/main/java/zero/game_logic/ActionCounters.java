@@ -1,4 +1,4 @@
-package ru.zero.game_logic;
+package zero.game_logic;
 
 public class ActionCounters {
 

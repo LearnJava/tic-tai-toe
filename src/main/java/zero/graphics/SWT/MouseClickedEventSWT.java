@@ -1,4 +1,4 @@
-package ru.zero.graphics.SWT;
+package zero.graphics.SWT;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -8,11 +8,10 @@ import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
-
-import ru.zero.StartAllVersionHere;
-import ru.zero.game_logic.ActionCounters;
-import ru.zero.game_logic.Cell;
-import ru.zero.game_logic.Field;
+import zero.StartAllVersionHere;
+import zero.game_logic.ActionCounters;
+import zero.game_logic.Cell;
+import zero.game_logic.Field;
 
 class MouseClickedEventSWT {
 
@@ -26,7 +25,7 @@ class MouseClickedEventSWT {
 		this.logicField = logicField;
 
 		if (ActionCounters.getCounter() < GraphicFieldSWT.NUMBER_OF_CELL
-				&& !Field.gameOver) {
+		    && !Field.gameOver) {
 
             Cell[][] array = logicField.getArray();
             Cell cell = array[gCell.getgX()][gCell.getgY()];
@@ -78,7 +77,7 @@ class MouseClickedEventSWT {
 			final Shell dialog = new Shell(GuiSWT.shell, SWT.DIALOG_TRIM
 					| SWT.APPLICATION_MODAL);
 			Font fontForDialog = new Font(StartAllVersionHere.display, "Arial", 14, SWT.BOLD
-					| SWT.ITALIC);
+			                                                                        | SWT.ITALIC);
 
 			RowLayout layoutForDialogWindow = new RowLayout();
 			layoutForDialogWindow.type = SWT.VERTICAL;

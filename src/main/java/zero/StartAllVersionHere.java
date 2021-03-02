@@ -1,4 +1,4 @@
-package ru.zero;
+package zero;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -7,9 +7,9 @@ import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
-import ru.zero.game_logic.Field;
-import ru.zero.graphics.SWING.Gui;
-import ru.zero.graphics.SWT.GuiSWT;
+import zero.game_logic.Field;
+import zero.graphics.SWING.Gui;
+import zero.graphics.SWT.GuiSWT;
 
 public class StartAllVersionHere {
 

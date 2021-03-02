@@ -1,4 +1,4 @@
-package ru.zero.graphics.SWT;
+package zero.graphics.SWT;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -8,8 +8,8 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
-import ru.zero.game_logic.ActionCounters;
-import ru.zero.game_logic.Field;
+import zero.game_logic.ActionCounters;
+import zero.game_logic.Field;
 
 class GraphicFieldSWT {
 
